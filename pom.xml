@@ -30,7 +30,6 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven-filtering-version>3.1.1</maven-filtering-version>
   </properties>
 
   <build>
@@ -40,6 +39,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -56,13 +56,6 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <dependencies>
-          <dependency>
-            <groupId>org.apache.maven.shared</groupId>
-            <artifactId>maven-filtering</artifactId>
-            <version>${maven-filtering-version}</version>
-          </dependency>
-        </dependencies>
         <executions>
           <execution>
             <goals>
@@ -73,55 +66,6 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <dependencies>
-          <dependency>
-            <groupId>org.apache.maven.shared</groupId>
-            <artifactId>maven-filtering</artifactId>
-            <version>${maven-filtering-version}</version>
-          </dependency>
-        </dependencies>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>org.folio.rest.SpringOkapiModule</mainClass>
-            </manifest>
-          </archive>
-          <webResources>
-            <webResource>
-              <filtering>false</filtering>
-              <directory>src/main/resources</directory>
-              <excludes>
-                <exclude>descriptors/**</exclude>
-              </excludes>
-            </webResource>
-            <webResource>
-              <filtering>true</filtering>
-              <directory>src/main/resources/descriptors</directory>
-              <targetPath>../</targetPath>
-              <includes>
-                <include>DeploymentDescriptor.json</include>
-                <include>ModuleDescriptor.json</include>
-              </includes>
-            </webResource>
-          </webResources>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <configuration>
-          <delimiters>
-            <delimiter>@</delimiter>
-          </delimiters>
-        </configuration>
       </plugin>
 
     </plugins>
