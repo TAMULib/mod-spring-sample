@@ -7,7 +7,7 @@ import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.folio.rest.data.model.BaseEntity;
+import org.folio.rest.domain.model.BaseEntity;
 
 @Entity
 public class Wizard extends BaseEntity {
