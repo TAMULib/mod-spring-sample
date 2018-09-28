@@ -1,0 +1,7 @@
+{
+  "srvcId": "@project.artifactId@-@project.version@",
+  "nodeId": "localhost",
+  "descriptor": {
+    "exec": "java -jar ../mod-spring-seed/target/mod-spring-seed-@project.version@.jar --server.port=%p"
+  }
+}
