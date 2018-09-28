@@ -9,7 +9,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.folio.rest.data.model.BaseEntity;
+import org.folio.rest.domain.model.BaseEntity;
 
 @Entity
 public class Wand extends BaseEntity {
