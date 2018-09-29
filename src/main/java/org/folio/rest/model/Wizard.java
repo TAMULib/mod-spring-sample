@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -17,11 +19,18 @@ public class Wizard extends AbstractBaseEntity {
   @Size(min = 5, max = 100)
   private String name;
 
+  @Column
+  @NotNull
+  @Min(0)
+  @Max(100)
+  private int magic;
+
   @OneToOne(fetch = FetchType.EAGER, optional = true)
   private Wand wand;
 
   public Wizard() {
     super();
+    this.magic = 0;
   }
 
   public Wizard(String name, Wand wand) {
@@ -44,6 +53,14 @@ public class Wizard extends AbstractBaseEntity {
 
   public void setWand(Wand wand) {
     this.wand = wand;
+  }
+
+  public int getMagic() {
+    return magic;
+  }
+
+  public void setMagic(int magic) {
+    this.magic = magic;
   }
 
 }
