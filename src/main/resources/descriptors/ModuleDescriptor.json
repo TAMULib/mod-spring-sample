@@ -1,6 +1,6 @@
 {
   "id": "@project.artifactId@-@project.version@",
-  "name": "Spring Seed",
+  "name": "Spring Sample",
   "provides": [
     {
       "id": "wizards",

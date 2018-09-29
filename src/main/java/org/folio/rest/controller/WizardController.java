@@ -51,7 +51,6 @@ public class WizardController implements ResourceProcessor<Resource<Wizard>> {
     );
     // @formatter:on
     return resource;
-
   }
 
 }

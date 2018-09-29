@@ -2,6 +2,6 @@
   "srvcId": "@project.artifactId@-@project.version@",
   "nodeId": "localhost",
   "descriptor": {
-    "exec": "java -jar ../mod-spring-seed/target/mod-spring-seed-@project.version@.jar -Dspring.config.location=classpath:/ --server.port=%p"
+    "exec": "java -jar ../mod-spring-sample/target/mod-spring-sample-@project.version@.jar -Dspring.config.location=classpath:/ --server.port=%p"
   }
 }

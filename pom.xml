@@ -5,10 +5,10 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>mod-spring-seed</artifactId>
+  <artifactId>mod-spring-sample</artifactId>
 
-  <name>Spring Seed Module</name>
-  <description>Okapi seed module using Spring Boot</description>
+  <name>Spring Sample Okapi Module</name>
+  <description>Okapi sample module using Spring Boot</description>
 
   <licenses>
     <license>

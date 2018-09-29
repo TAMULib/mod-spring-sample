@@ -1,5 +1,5 @@
 logging:
-  file: mod-spring-seed.log
+  file: mod-spring-sample.log
   level:
     org:
       hibernate: INFO
@@ -17,11 +17,11 @@ spring:
     returnBodyOnUpdate: true
   datasource:
     platform: h2
-    url: jdbc:h2:./mod-spring-seed;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:./mod-spring-sample;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     driverClassName: org.h2.Driver
     # platform: postgres
     # driverClassName: org.postgresql.Driver
-    # url: jdbc:postgresql://localhost:5432/mod-spring-seed
+    # url: jdbc:postgresql://localhost:5432/mod-spring-sample
     
     username: folio
     password: folio
