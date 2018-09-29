@@ -26,6 +26,18 @@
         },
         {
           "methods": ["GET"],
+          "pathPattern": "/wizards/{id}/magic/increment",
+          "permissionsRequired": ["wizards.magic.increment.get"],
+          "permissionsDesired": ["wizards.domain.*", "wizards.domain.all"]
+        },
+        {
+          "methods": ["GET"],
+          "pathPattern": "/wizards/{id}/magic/decrement",
+          "permissionsRequired": ["wizards.magic.decrement.get"],
+          "permissionsDesired": ["wizards.domain.*", "wizards.domain.all"]
+        },
+        {
+          "methods": ["GET"],
           "pathPattern": "/wizards/{id}/wand",
           "permissionsRequired": ["wizards.wand.item.get"],
           "permissionsDesired": ["wizards.domain.*", "wizards.domain.all"]
@@ -116,6 +128,16 @@
       "description": "Get individual wizard"
     },
     {
+      "permissionName": "wizards.magic.increment.get",
+      "displayName": "Wizards - increments wizard's magic",
+      "description": "Increment wizard's magic"
+    },
+    {
+      "permissionName": "wizards.magic.decrement.get",
+      "displayName": "Wizards - decrements wizard's magic",
+      "description": "Decrement wizard's magic"
+    },
+    {
       "permissionName": "wizards.wands.item.get",
       "displayName": "Wizard's Wand - get individual wizard's wand from storage",
       "description": "Get individual wizard's wand"
@@ -187,6 +209,8 @@
       "subPermissions": [
         "wizards.collection.get",
         "wizards.item.get",
+        "wizards.magic.increment.get",
+        "wizards.magic.decrement.get",
         "wizards.wands.item.get",
         "wizards.item.post",
         "wizards.item.put",
