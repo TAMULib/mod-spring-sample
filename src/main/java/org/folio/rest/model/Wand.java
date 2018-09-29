@@ -9,10 +9,10 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.folio.rest.domain.model.BaseEntity;
+import org.folio.rest.domain.model.AbstractBaseEntity;
 
 @Entity
-public class Wand extends BaseEntity {
+public class Wand extends AbstractBaseEntity {
 
   @Column
   @NotNull
