@@ -37,3 +37,5 @@ spring:
   thymeleaf:
     mode: TEXT
     suffix: .sql
+
+additional.domain.packages:

@@ -1,7 +1,5 @@
 package org.folio.rest.controller;
 
-import java.util.UUID;
-
 import org.folio.rest.model.Wizard;
 import org.folio.rest.model.repo.WizardRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +19,13 @@ public class WizardController implements ResourceProcessor<Resource<Wizard>> {
   private WizardRepo wizardRepo;
 
   @GetMapping("/wizards/{id}/magic/increment")
-  public @ResponseBody ResponseEntity<String> incrementMagic(@PathVariable UUID id) {
+  public @ResponseBody ResponseEntity<String> incrementMagic(@PathVariable String id) {
     wizardRepo.incrementMagic(id);
     return ResponseEntity.ok("Success");
   }
 
   @GetMapping("/wizards/{id}/magic/decrement")
-  public @ResponseBody ResponseEntity<String> decrementMagic(@PathVariable UUID id) {
+  public @ResponseBody ResponseEntity<String> decrementMagic(@PathVariable String id) {
     wizardRepo.decrementMagic(id);
     return ResponseEntity.ok("Success");
   }
