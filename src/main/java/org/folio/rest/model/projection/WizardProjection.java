@@ -9,6 +9,8 @@ public interface WizardProjection {
 
   public String getName();
 
+  public int getMagic();
+
   public Wand getWand();
 
 }
