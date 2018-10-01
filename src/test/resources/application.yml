@@ -1,5 +1,5 @@
 logging:
-  file: mod-spring-sample.log
+  file: logs/mod-spring-sample-tests.log
   level:
     org:
       hibernate: INFO
